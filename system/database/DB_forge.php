@@ -52,7 +52,20 @@ abstract class CI_DB_forge {
 		$this->db =& $CI->db;
 		log_message('debug', 'Database Forge Class Initialized');
 	}
-
+	
+	// --------------------------------------------------------------------
+	
+	/**
+	* Run SQL 
+	*
+	* @access	public
+	* @param	string	the query 
+	* @return	result
+	*/
+	function query($sql) {
+		return $this->db->query($sql);
+	}    
+	
 	// --------------------------------------------------------------------
 
 	/**
